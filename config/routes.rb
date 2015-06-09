@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  get 'sessions/login'
-  post 'session/login'
-  get 'sessions/logout'
+  get 'teachers/edit'
 
+  get 'sessions/login'
+  post 'sessions/login'
+  get 'sessions/logout'
+  root 'parents#index'
   resources :parents
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

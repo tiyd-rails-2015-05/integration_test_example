@@ -24,8 +24,7 @@
     <%= f.text_field :child_name %>
   </div>
   <div class="field">
-    <%= f.label :teacher_id %><br>
-    <%= f.number_field :teacher_id %>
+    <%= f.hidden_field :teacher_id, :value => session[:teacher_id] %>
   </div>
   <div class="actions">
     <%= f.submit %>

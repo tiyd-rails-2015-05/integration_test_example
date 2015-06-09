@@ -3,6 +3,8 @@ require 'test_helper'
 class ParentsControllerTest < ActionController::TestCase
   setup do
     @parent = parents(:one)
+    bill = Teacher.create!(name: "bill", email: "bill@bill", password: "bill")
+    session[:teacher_id] = bill.id
   end
 
   test "should get index" do
