@@ -23,3 +23,8 @@ Here is an [ERD](https://www.lucidchart.com/invitations/accept/279f5fb1-fbb2-497
         * can run `bin/rake db:setup` in-place of the previous 2
     * `bin/rails server`
 * Open your browser and navigate to `localhost:3000`
+
+###For More Info on Some Tools...
+I used Bourbon and Neat for my scss on this assignment. If you're interested here are the links:
+* [Bourbon](http://bourbon.io/)
+* [Neat](http://neat.bourbon.io/)
