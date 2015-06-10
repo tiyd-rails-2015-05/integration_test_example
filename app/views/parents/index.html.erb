@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Edit Your Profile', edit_teacher_path(session[:teacher_id]) %>
 
 <h1>Listing Parents</h1>
 
@@ -31,5 +32,4 @@
 </table>
 
 <br>
-<%= link_to 'Edit Your Profile', edit_teacher_path(session[:teacher_id]) %>
 <%= link_to 'New Parent', new_parent_path %>
