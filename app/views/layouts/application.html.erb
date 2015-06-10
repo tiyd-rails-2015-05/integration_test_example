@@ -7,11 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if session[:teacher_id] %>
-  <div>Hello <%= Teacher.find_by_id(session[:teacher_id]).name %></div></br>
-<% end %>
-<%= link_to "Logout", sessions_logout_path if session[:teacher_id] %></br>
+<div class="texture">
+  <div class="texture-inverted"></div>
+  <div class="texture-normal"></div>
+</div><br>
+<div class="name-tag">
+  <% if session[:teacher_id] %>
+    <div>Hello <%= Teacher.find_by_id(session[:teacher_id]).name %></div></br>
+  <% end %>
+</div>
 <%= yield %>
+<div class="logout">
+  <%= link_to "Logout", sessions_logout_path if session[:teacher_id] %></br>
+</div>
 
 </body>
 </html>
