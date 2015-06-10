@@ -23,7 +23,7 @@ class ParentsControllerTest < ActionController::TestCase
       post :create, parent: { child_name: @parent.child_name, email: @parent.email, name: @parent.name, teacher_id: @parent.teacher_id }
     end
 
-    assert_redirected_to parents_path(assigns(:teacher_id))
+    assert_redirected_to parents_path
   end
 
   test "should show parent" do
@@ -38,7 +38,7 @@ class ParentsControllerTest < ActionController::TestCase
 
   test "should update parent" do
     patch :update, id: @parent, parent: { child_name: @parent.child_name, email: @parent.email, name: @parent.name, teacher_id: @parent.teacher_id }
-    assert_redirected_to parents_path(assigns(:teacher_id))
+    assert_redirected_to parents_path
   end
 
   test "should destroy parent" do

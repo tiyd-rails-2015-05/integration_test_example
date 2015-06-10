@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'sessions/login'
+  get 'login' => 'sessions#login'
   post 'sessions/login'
+  post 'login' => 'sessions#login'
   get 'sessions/logout'
   root 'sessions#login'
   resources :parents

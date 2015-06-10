@@ -5,12 +5,10 @@ class TeachersController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @teacher.update(teacher_params)
-        format.html { redirect_to parents_path, notice: 'Teacher was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+    if @teacher.update(teacher_params)
+      redirect_to parents_path, notice: 'Teacher was successfully updated.'
+    else
+      render :edit
     end
   end
 

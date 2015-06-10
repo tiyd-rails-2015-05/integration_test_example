@@ -5,7 +5,7 @@ class ParentsController < ApplicationController
   # GET /parents
   # GET /parents.json
   def index
-    @parents = Parent.all
+    @parents = Parent.with_email.where(teacher_id: session[:teacher_id])
   end
 
   # GET /parents/1
@@ -26,6 +26,7 @@ class ParentsController < ApplicationController
   # POST /parents.json
   def create
     @parent = Parent.new(parent_params)
+    @parent.teacher_id = session[:teacher_id]
 
     respond_to do |format|
       if @parent.save
